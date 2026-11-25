@@ -1,18 +1,18 @@
-> Buka folder ini untuk bagian ini. Semua path relatif terhadap folder ini. Persiapan, troubleshooting, dan cleanup: [README utama](../README.md).
+# Demo 4 · Kamus Data
 
-# Demo 4 · Kamus Data (±18 menit)
+[Persiapan](../README.md) · [Troubleshooting](../TROUBLESHOOTING.md)
 
-Instruktur membahas ERD kasus contoh, lalu memperagakan cara mengisi kamus dengan `BRANCHES` dan `CUSTOMERS` sebagai contoh (±6 menit). Peserta mengerjakan 4.1–4.3 (±12 menit).
+Kerjakan 4.1–4.3: lengkapi kamus data. `BRANCHES` dan `CUSTOMERS` sudah terisi sebagai contoh.
 
-## 4.1 Samakan nama dan baca contoh (±3 menit)
+## 4.1 Samakan nama dan baca contoh
 
 Buka `latihan-kamus-data.md`. Bagian `BRANCHES` dan `CUSTOMERS` sudah lengkap: perhatikan cara menulis `Wajib diisi?`, `FK -> BRANCHES`, dan `CK:`. Samakan nama kolom di ERD dengan nama di file ini (nama baku untuk DDL sesi 22), lalu simpan ERD.
 
-## 4.2 Isi `ACCOUNTS` dan `TRANSACTIONS` (±7 menit)
+## 4.2 Isi `ACCOUNTS` dan `TRANSACTIONS`
 
 Ganti setiap `TODO` di kolom **Tipe Oracle**, **Wajib diisi?**, dan **Constraint** (15 baris). Kolom tanpa constraint: hapus `TODO`, biarkan kosong.
 
-## 4.3 Cek kamus terhadap ERD (±2 menit)
+## 4.3 Cek kamus terhadap ERD
 
 Salin ERD dan kamus, lalu jalankan cek dengan dua file:
 

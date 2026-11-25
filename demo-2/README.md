@@ -1,18 +1,18 @@
-> Buka folder ini untuk bagian ini. Semua path relatif terhadap folder ini. Persiapan, troubleshooting, dan cleanup: [README utama](../README.md).
+# Demo 2 · Baca Kasus Contoh: Entity, Key, Relasi
 
-# Demo 2 · Baca Kasus Contoh: Entity, Key, Relasi (±20 menit)
+[Persiapan](../README.md) · [Troubleshooting](../TROUBLESHOOTING.md)
 
-Instruktur memperagakan simbol crow's foot dan menurunkan `BRANCHES` serta relasinya dari teks kebutuhan (±8 menit). Peserta mengisi `latihan-baca-erd.md` (±12 menit). Tidak butuh database.
+Isi `latihan-baca-erd.md`: entity, key, dan relasi dari teks kebutuhan. Bagian ini tanpa database.
 
-## 2.1 Baca kebutuhan (±4 menit)
+## 2.1 Baca kebutuhan
 
 Buka `tabungan-umkm.md`. Tandai kata benda yang menjadi entity, keterangan yang menjadi atribut, dan kata seperti "unik" atau "tidak boleh negatif" yang menjadi constraint.
 
-## 2.2 Isi tabel entity dan key (±5 menit)
+## 2.2 Isi tabel entity dan key
 
 Buka `latihan-baca-erd.md` bagian A. Baris `BRANCHES` sudah diisi sebagai contoh. Lengkapi tiga entity lain: primary key, atribut `UQ`, foreign key beserta tabel yang ditunjuk, dan nilai yang dibatasi.
 
-## 2.3 Isi relasi dan simbol (±3 menit)
+## 2.3 Isi relasi dan simbol
 
 Lengkapi bagian B (dua relasi) dan bagian C (cara membaca empat simbol crow's foot), lalu cocokkan jumlahnya dengan **Cek mandiri** di bawah file.
 

@@ -1,12 +1,12 @@
-> Buka folder ini untuk bagian ini. Semua path relatif terhadap folder ini. Persiapan, troubleshooting, dan cleanup: [README utama](../README.md).
+# Demo 1 · Setup Oracle & `ALP_DEV`
 
-# Demo 1 · Setup Oracle & `ALP_DEV` (±55 menit)
+[Persiapan](../README.md) · [Troubleshooting](../TROUBLESHOOTING.md)
 
-Instruktur memperagakan `docker ps`, anatomi `docker run`, skrip `ALP_DEV`, koneksi, dan query cek (±15 menit). Peserta lalu mengerjakan 1.1–1.6 (±40 menit).
+Kerjakan 1.1–1.6: jalankan Oracle di Docker, buat user `ALP_DEV`, sambungkan VS Code, lalu jalankan query cek.
 
 Semua perintah di bagian ini sama untuk Windows (PowerShell), macOS, dan Linux. Docker Desktop (atau Rancher Desktop) harus sudah jalan: ikon paus di menu bar/taskbar berstatus running.
 
-## 1.1 Cek tools (±5 menit)
+## 1.1 Cek tools
 
 Buka terminal di folder `demo-1`, lalu jalankan:
 
@@ -17,7 +17,7 @@ docker images container-registry.oracle.com/database/free
 
 Yang harus terlihat: `Docker version 29...`, dan satu baris image `container-registry.oracle.com/database/free:23.26.4.0-lite` (±1,66 GB di disk). Kalau image belum ada, jalankan `docker pull container-registry.oracle.com/database/free:23.26.4.0-lite` (±1,3 GB download).
 
-## 1.2 Jalankan container Oracle (±5 menit)
+## 1.2 Jalankan container Oracle
 
 Ganti `ISI_PASSWORD_ADMIN` dengan password admin database buatan sendiri: minimal 8 karakter, campur huruf besar, huruf kecil, dan angka, tanpa simbol. Catat password ini.
 
@@ -32,7 +32,7 @@ docker run -d --name oracle-alp -p 1521:1521 -e ORACLE_PWD=ISI_PASSWORD_ADMIN -v
 | `-e ORACLE_PWD=...` | Password admin (`SYS`, `SYSTEM`) |
 | `-v oracle-alp-data:/opt/oracle/oradata` | Data disimpan di volume, tetap ada walau container dihapus |
 
-## 1.3 Tunggu sampai siap (±3 menit)
+## 1.3 Tunggu sampai siap
 
 ```bash
 docker ps
@@ -55,7 +55,7 @@ docker ps --format "table {{.Names}}\t{{.Status}}\t{{.Ports}}"
 
 Pengecekan lain: `docker logs oracle-alp` memuat baris `DATABASE IS READY TO USE!` (baris ini bisa tergulung ke atas oleh log berikutnya).
 
-## 1.4 Buat user `ALP_DEV` (±9 menit)
+## 1.4 Buat user `ALP_DEV`
 
 Salin skrip ke container, lalu jalankan sebagai admin:
 
@@ -84,7 +84,7 @@ Setup ALP_DEV selesai.
 
 Skrip ini aman dijalankan ulang. Pada percobaan kedua, baris pertama berubah menjadi `Tablespace USERS sudah ada.`, dan password `ALP_DEV` diganti dengan yang baru diketik.
 
-## 1.5 Buat koneksi di SQL Developer for VS Code (±13 menit)
+## 1.5 Buat koneksi di SQL Developer for VS Code
 
 1. Klik ikon **SQL Developer** (ikon database) di activity bar kiri VS Code.
 2. Di bagian **Connections**, klik **Create Connection** (atau tombol **+**).
@@ -117,7 +117,7 @@ Setelah VS Code pertama kali dibuka, ekstensi butuh ±20 detik (`Activating...` 
 
 Kalau muncul pertanyaan `Allow automated usage reporting to Oracle?`, pilih **Decline**.
 
-## 1.6 Jalankan query cek (±5 menit)
+## 1.6 Jalankan query cek
 
 1. Buka `check/00-cek-koneksi.sql`.
 2. Klik ikon **Attach Connection** di kanan atas editor, pilih `ALP_DEV @ FREEPDB1`. Status bar bawah berubah menjadi `(Dedicated) ALP_DEV @ FREEPDB1`.

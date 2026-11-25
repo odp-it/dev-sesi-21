@@ -1,10 +1,10 @@
-> Buka folder ini untuk bagian ini. Semua path relatif terhadap folder ini. Persiapan, troubleshooting, dan cleanup: [README utama](../README.md).
+# Demo 3 · Gambar ERD di Draw.io
 
-# Demo 3 · Gambar ERD di Draw.io (±32 menit)
+[Persiapan](../README.md) · [Troubleshooting](../TROUBLESHOOTING.md)
 
-Instruktur memperagakan file `.drawio.png`, shape **Entity Relation**, dan relasi crow's foot (±12 menit). Peserta mengerjakan 3.1–3.3 (±20 menit).
+Kerjakan 3.1–3.3: gambar ERD di Draw.io dengan shape **Entity Relation** dan relasi crow's foot.
 
-## 3.1 Buat file ERD dan tabel (±12 menit)
+## 3.1 Buat file ERD dan tabel
 
 1. Di Explorer, klik folder `demo-3`, lalu klik ikon **New File...** dan ketik nama `erd-tabungan-umkm.drawio.png`, Enter.
    File berakhiran `.drawio.png` terbuka sebagai editor Draw.io (label `Draw.io (Binary)` di kanan atas) dan sekaligus tersimpan sebagai gambar PNG.
@@ -18,7 +18,7 @@ Instruktur memperagakan file `.drawio.png`, shape **Entity Relation**, dan relas
 
 Yang harus terlihat: 4 tabel di canvas, setiap tabel punya baris `PK` bergaris bawah.
 
-## 3.2 Hubungkan relasi (±5 menit)
+## 3.2 Hubungkan relasi
 
 1. Arahkan mouse ke ujung kanan baris `PK` di tabel sisi "satu" (mis. `branch_id` di `BRANCHES`), tarik garis ke ujung kiri baris `FK` di tabel sisi "banyak" (`branch_id` di `CUSTOMERS`). Kedua ujung garis menempel (titik hijau).
 2. Dengan garis masih terpilih, buka panel **Format** (ikon panel kanan di toolbar). Di bagian **Line**, ubah **Line Start** menjadi simbol dua garis tegak (`ERmandOne`, "tepat satu") dan **Line End** menjadi simbol kaki gagak (`ERmany`, "banyak").
@@ -27,7 +27,7 @@ Yang harus terlihat: 4 tabel di canvas, setiap tabel punya baris `PK` bergaris b
 
 Yang harus terlihat: 3 garis relasi dengan ujung `||` di sisi tabel induk dan kaki gagak di sisi tabel anak. Tutup file lalu buka lagi: diagram tetap bisa diedit. File yang sama juga bisa dibuka sebagai gambar biasa (dilampirkan ke dokumen atau chat tim).
 
-## 3.3 Cek dengan checklist dan `../lab/cek-erd.py` (±3 menit)
+## 3.3 Cek dengan checklist dan `../lab/cek-erd.py`
 
 1. Cocokkan ERD dengan `checklist-erd.md` bagian Demo 3.
 2. Pastikan file sudah disimpan, lalu dari folder `demo-3` jalankan cek otomatis. Skrip dijalankan di dalam container `oracle-alp` (Python sudah ada di image, tidak ada instalasi baru). Perintahnya sama di PowerShell, macOS, dan Linux:
