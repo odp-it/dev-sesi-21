@@ -57,3 +57,7 @@ Kerjakan di salinan file (mis. `erd-tantangan.drawio.png`).
 
 1. Satu rekening ternyata bisa dimiliki lebih dari satu nasabah (rekening bersama), dan satu nasabah tetap boleh punya banyak rekening. Ubah ERD: relasi apa yang terbentuk antara `CUSTOMERS` dan `ACCOUNTS`, dan tabel apa yang perlu ditambahkan? Gambar perubahannya, tandai `PK`, `FK`, dan `UQ`. Pasangan nasabah dan rekening yang sama tidak boleh tercatat dua kali.
 2. Nasabah ingin menyimpan daftar penerima transfer (nama penerima dan nomor rekening penerima). Tambahkan entity-nya ke ERD, tentukan relasinya ke `CUSTOMERS`, dan putuskan kombinasi kolom mana yang harus unik.
+3. Pratinjau dua tabel yang nanti hampir pasti ada di ALP kelompok. Gambar di salinan ERD Tabungan UMKM, hanya di ERD (tanpa `CREATE TABLE`):
+   - `APP_USERS` (pengguna aplikasi): `user_id`, `username` (unik), `password_hash`, `role` (nilai dibatasi: `ADMIN`, `PEMILIK`, `STAF`), dan FK ke `CUSTOMERS` yang boleh kosong (admin tidak terikat nasabah).
+   - `LOAN_APPLICATIONS` (pengajuan pembiayaan UMKM): `loan_id`, FK ke `CUSTOMERS`, jumlah pengajuan (uang), tenor dalam bulan (3–60), dan status pengajuan.
+   Tentukan relasi masing-masing ke `CUSTOMERS`, letak FK, dan kolom mana yang memakai `CK`. Angka dan hasil Demo 3 tidak berubah.

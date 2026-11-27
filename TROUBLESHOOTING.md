@@ -22,4 +22,6 @@
 | `ERD tidak bisa dinilai: PNG ini tidak berisi data diagram` | Yang disalin screenshot atau PNG hasil export tanpa data diagram | Salin file `.drawio.png` yang diedit di VS Code |
 | `Tabel 'Table' tidak dihitung` | Judul tabel masih bawaan shape, atau baris belum diisi | Ganti judul dan isi minimal 2 baris kolom |
 | Skor atau daftar `Tabel terbaca` tidak berubah setelah file diperbaiki | File belum disimpan, atau `docker cp` gagal sehingga yang dinilai salinan lama | Simpan, jalankan ulang `docker cp` dan pastikan tidak ada pesan error sebelum `docker exec` |
+| `git push` ditolak (`rejected`, `fetch first`) atau `Permission denied` | Anggota lain sudah push duluan, atau akun belum diundang sebagai collaborator | `git pull` lalu `git push` ulang; cek undangan di GitHub (L.0 langkah 3) |
+| `docker cp` gagal: `no such file` pada `docs/erd.drawio.png` | Terminal tidak di folder repo kelompok, atau file belum dibuat | `cd` ke folder `alp-<nama-kelompok>-db`, cek `docs/` berisi file |
 | `Error response from daemon: container ... is not running` saat cek | Container `oracle-alp` mati | `docker start oracle-alp`, ulangi (cek bisa jalan tanpa menunggu database siap) |

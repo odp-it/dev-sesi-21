@@ -1,8 +1,8 @@
-# Kamus Data · ERD Tim
+# Kamus Data · ERD Kelompok
 
-Lab L.4 · isi satu tabel per bagian, salin bagian "Tabel" untuk setiap entity di ERD tim. Kamus ini dipakai langsung di sesi 22 untuk menulis `CREATE TABLE`, jadi lengkapi sampai tidak ada sel kosong.
+Lab L.4 · isi satu tabel per bagian, salin bagian "Tabel" untuk setiap entity di ERD kelompok. Kamus ini dipakai langsung di sesi 22 untuk menulis `CREATE TABLE`, jadi lengkapi sampai tidak ada sel kosong.
 
-Tim: `<nama-tim>` · Tanggal: `<tanggal>`
+Kelompok: `<nama-kelompok>` · Tanggal: `<tanggal>`
 
 `cek-erd.py` membaca file ini: judul bagian tetap berbentuk ``## Tabel: `NAMA_TABEL` `` (sama dengan judul tabel di ERD) dan nama kolom tabel markdown tidak diubah.
 

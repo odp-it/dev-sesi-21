@@ -12,9 +12,10 @@
 - [ ] Nilai yang dibatasi (segmen, produk, status, jenis, kategori) dicatat di samping atribut.
 - [ ] Tidak ada data yang diulang di dua tabel (mis. nama nasabah tidak disimpan lagi di tabel transaksi).
 
-## Lab L.3 · Peer review ERD tim lain
+## Lab L.3 · Peer review ERD kelompok lain
 
-- [ ] Setiap entity bisa dikaitkan ke satu fitur MVP di backlog tim.
+- [ ] Setiap entity bisa dikaitkan ke satu fitur MVP di backlog kelompok.
+- [ ] Ada tabel pengguna + role (`username` unik, `role` bernilai terbatas).
 - [ ] Setiap entity punya PK; FK di sisi "banyak".
 - [ ] Relasi N:M (kalau ada) dipecah dengan tabel penghubung.
 - [ ] Tipe data uang dan tanggal masuk akal.
