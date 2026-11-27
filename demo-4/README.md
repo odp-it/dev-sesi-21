@@ -26,5 +26,5 @@ Yang harus terlihat: baris 7 dan 8 bertambah sampai `27 dari 27 kolom` dan `Subt
 
 ## Tantangan tambahan Demo 4 (opsional)
 
-1. Pilih `CUSTOMERS` dan `TRANSACTIONS`. Untuk tiap tabel tulis satu baris data yang valid dan dua baris yang harus ditolak database. Untuk setiap baris yang ditolak, sebut constraint yang menolaknya: `PK`/`UQ` (data ganda), `FK` (induk tidak ada), atau `CK` (nilai di luar aturan).
+1. Pilih `CUSTOMERS` dan `TRANSACTIONS`. Untuk tiap tabel tulis satu baris data yang valid dan dua baris yang harus ditolak database. Untuk setiap baris yang ditolak, sebut constraint yang menolaknya: `PK`/`UQ` (data ganda), `FK` (parent tidak ada), atau `CK` (nilai di luar aturan).
 2. Isi kolom **Nilai bawaan** di `ACCOUNTS` dan `TRANSACTIONS` untuk kolom yang pantas punya `DEFAULT`, dan tulis alasannya satu kalimat per kolom.

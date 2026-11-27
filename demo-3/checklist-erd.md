@@ -15,7 +15,7 @@
 ## Lab L.3 · Peer review ERD kelompok lain
 
 - [ ] Setiap entity bisa dikaitkan ke satu fitur MVP di backlog kelompok.
-- [ ] Ada tabel pengguna + role (`username` unik, `role` bernilai terbatas).
+- [ ] Ada tabel user + role (`username` unik, `role` bernilai terbatas).
 - [ ] Setiap entity punya PK; FK di sisi "banyak".
 - [ ] Relasi N:M (kalau ada) dipecah dengan tabel penghubung.
 - [ ] Tipe data uang dan tanggal masuk akal.

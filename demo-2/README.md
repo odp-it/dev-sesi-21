@@ -16,7 +16,7 @@ Buka `latihan-baca-erd.md` bagian A. Baris `BRANCHES` sudah diisi sebagai contoh
 
 Lengkapi bagian B (dua relasi) dan bagian C (cara membaca empat simbol crow's foot), lalu cocokkan jumlahnya dengan **Cek mandiri** di bawah file.
 
-Yang harus terlihat: tidak ada `TODO` tersisa, 4 entity, 3 relasi 1:N, 3 foreign key, 5 atribut `UQ`, 5 kolom berdaftar nilai, 2 aturan angka.
+Yang harus terlihat: tidak ada `TODO` tersisa, 4 entity, 3 relasi 1:N, 3 foreign key, 5 atribut `UQ`, 5 kolom dengan daftar nilai, 2 aturan angka.
 
 ## Tantangan tambahan Demo 2 (opsional)
 

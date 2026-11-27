@@ -57,7 +57,7 @@ Pengecekan lain: `docker logs oracle-alp` memuat baris `DATABASE IS READY TO USE
 
 ## 1.4 Buat user `ALP_DEV`
 
-Salin skrip ke container, lalu jalankan sebagai admin:
+Salin script ke container, lalu jalankan sebagai admin:
 
 ```bash
 docker cp setup/01-alp-dev.sql oracle-alp:/tmp/01-alp-dev.sql
@@ -82,7 +82,7 @@ ALP_DEV      USERS                OPEN
 Setup ALP_DEV selesai.
 ```
 
-Skrip ini aman dijalankan ulang. Pada percobaan kedua, baris pertama berubah menjadi `Tablespace USERS sudah ada.`, dan password `ALP_DEV` diganti dengan yang baru diketik.
+Script ini aman dijalankan ulang. Pada percobaan kedua, baris pertama berubah menjadi `Tablespace USERS sudah ada.`, dan password `ALP_DEV` diganti dengan yang baru diketik.
 
 ## 1.5 Buat koneksi di SQL Developer for VS Code
 
@@ -93,12 +93,12 @@ Skrip ini aman dijalankan ulang. Pada percobaan kedua, baris pertama berubah men
 | Field | Nilai |
 | --- | --- |
 | Connection Name | `ALP_DEV @ FREEPDB1` |
-| Connection Type | `Basic` (bawaan) |
+| Connection Type | `Basic` (default) |
 | Hostname | `localhost` |
 | Port | `1521` |
-| Type | `Service Name` (bawaan) |
+| Type | `Service Name` (default) |
 | Service Name | `FREEPDB1` |
-| Authentication Type / Role | `Default` (bawaan) |
+| Authentication Type / Role | `Default` (default) |
 | Username | `ALP_DEV` |
 | Password | password dari 1.4 |
 | Save Password | dicentang (database lokal latihan) |

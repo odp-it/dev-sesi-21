@@ -24,7 +24,7 @@ Di Lab, setiap kelompok mengerjakan hal yang sama untuk ALP-nya sendiri.
 
 ## Project Kelompok: ALP Database Sprint
 
-**Tujuan.** Dalam dua hari (sesi 21-23 database Oracle, sesi 24 Claude Code), setiap kelompok membangun **database ALP sendiri** yang bisa dibangun ulang, terdokumentasi, dan dipresentasikan. Ini potongan database dari CP2 ALP ("ERD dan database schema") dan menjadi bekal untuk sesi Node.js/Express, React.js, dan React Native: backend, web, dan mobile membaca database yang sama.
+**Tujuan.** Dalam dua hari (sesi 21-23 database Oracle, sesi 24 Claude Code), setiap kelompok membangun **database ALP sendiri** yang bisa di-rebuild dan dipresentasikan, lengkap dengan dokumentasinya. Ini potongan database dari CP2 ALP ("ERD dan database schema") dan menjadi bekal untuk sesi Node.js/Express, React.js, dan React Native: backend, web, dan mobile membaca database yang sama.
 
 **Kelompok dan tema.** Kelompok ALP 3-4 orang, tema sesuai project brief CP1 (sesi 17-20): Perbankan, E-commerce, atau Logistik. Satu repo per kelompok, dibuat dari template (langkah L.0 di bagian Lab).
 
@@ -59,9 +59,9 @@ flowchart LR
 | Waktu | Sesi | Di Demo (individu) | Di Lab (kelompok, repo kelompok) | Hasil Lab |
 | --- | --- | --- | --- | --- |
 | Hari 1, 08.00-12.00 | 21 | Setup Oracle, baca ERD, gambar ERD, kamus data Tabungan UMKM | Kick-off, Tahap 1: repo, ERD, peer review, kamus data | `docs/erd.drawio.png`, `docs/kamus-data.md`, `docs/review.md` |
-| Hari 1, 13.00-17.00 | 22 | DDL, DML, uji input salah, query dasar | Tahap 2: DDL, data contoh, uji input salah, `00-run-all.sql` | `db/00` sampai `db/03` |
+| Hari 1, 13.00-17.00 | 22 | DDL, DML, test invalid input, query dasar | Tahap 2: DDL, data contoh, test invalid input, `00-run-all.sql` | `db/00` sampai `db/03` |
 | Malam hari 1 | mandiri | | Rapikan sesuai review, bangun ulang dua kali, isi README | `README.md` |
-| Hari 2, 08.00-12.00 | 23 | Laporan dan validasi, transaksi, explain plan dan index, koneksi Java/Node | Tahap 3: data uji, view laporan, validasi, transaksi, index | `db/04` sampai `db/07` |
+| Hari 2, 08.00-12.00 | 23 | Laporan dan validasi, transaksi, explain plan dan index, koneksi Java/Node | Tahap 3: test data, view laporan, validasi, transaksi, index | `db/04` sampai `db/07` |
 | Hari 2, 13.00-17.00 | 24 | Claude Code | Persiapan, lalu **presentasi kelompok 16.00-17.00** | README lengkap, bukti cek |
 | Hari 2, 23.59 | mandiri | | Push final, link repo dikumpulkan | Paket serah terima ke backend |
 
@@ -82,7 +82,7 @@ alp-<nama-kelompok>-db/
     ├── 01-ddl.sql            # Lab sesi 22
     ├── 02-seed.sql           # Lab sesi 22
     ├── 03-test-invalid.sql   # Lab sesi 22
-    ├── 04-data-uji.sql       # Lab sesi 23
+    ├── 04-test-data.sql       # Lab sesi 23
     ├── 05-laporan.sql        # Lab sesi 23
     ├── 06-transaksi.sql      # Lab sesi 23
     └── 07-index.sql          # Lab sesi 23
@@ -92,7 +92,7 @@ Satu anggota (driver) membuat repo dan mengundang anggota lain. Semua anggota cl
 
 ### Syarat untuk semua kelompok
 
-1. Tabel pengguna + role (`<awalan>_APP_USERS`), dipakai untuk login di sesi backend. Mulai dari ERD di Lab ini.
+1. Tabel user + role (`<awalan>_APP_USERS`), dipakai untuk login di sesi backend. Mulai dari ERD di Lab ini.
 2. README repo berisi: masalah dan pengguna, fitur MVP, cara menjalankan, ERD, aturan data penting, peta fitur → tabel → query, laporan, tiga pertanyaan bisnis, bukti cek.
 3. Awalan tabel 2-4 huruf per kelompok (mis. `KAS_`), supaya tabel kelompok dikenali.
 4. Ide terhubung ke produk BNI yang sudah ada atau menjadi lini bisnis baru BNI (lihat **Ide ALP dan produk BNI**), ditulis di README bagian Masalah dan pengguna.
@@ -103,14 +103,14 @@ Nilai project diberikan **saat presentasi di sesi 24**, berdasarkan hasil yang d
 
 | Komponen | Poin | Yang ditunjukkan |
 | --- | --- | --- |
-| A. ERD + kamus data | 25 | ERD, skor `lab/cek-erd.py`, entity sesuai fitur MVP, tabel pengguna + role, satu aturan data beserta alasannya |
+| A. ERD + kamus data | 25 | ERD, skor `lab/cek-erd.py`, entity sesuai fitur MVP, tabel user + role, satu aturan data beserta alasannya |
 | B. Database | 35 | `00-run-all.sql` jalan live, skor `cek-lab.sql` sesi 22, satu input salah ditolak |
 | C. Laporan + kesiapan backend | 15 | View laporan tampil, peta fitur → tabel → query di README |
 | D. Penyampaian | 25 | Alur masalah → data runtut, selesai 5 menit, tanya jawab dijawab dengan data |
 
 Rubrik Lab 100 poin di bagian Lab adalah panduan dan cek mandiri Tahap 1. Skor otomatis dijalankan kelompok sebelum presentasi dan ditempel di README bagian "Bukti cek".
 
-## Jembatan ke Tema Kelompok
+## Dari Demo ke Tema Kelompok
 
 Konsep di Demo (Tabungan UMKM) sama dengan yang dibutuhkan ERD kelompok. Pakai tabel ini untuk memetakan ERD kelompok sebelum menggambar.
 
@@ -120,9 +120,9 @@ Konsep di Demo (Tabungan UMKM) sama dengan yang dibutuhkan ERD kelompok. Pakai t
 | Relasi 1:N | Akun → transaksi | Pembeli → pesanan | Kiriman → riwayat status |
 | N:M lewat tabel penghubung | (tidak wajib) | Pesanan ↔ produk lewat isi pesanan | (tidak wajib) |
 | FK boleh kosong | Pengguna admin tanpa UMKM | Pengguna admin tanpa toko atau pembeli | Kiriman belum punya kurir |
-| Tabel pengguna + role | `ADMIN`, `PEMILIK`, `STAF` | `ADMIN`, `PENJUAL`, `PEMBELI` | `ADMIN`, `PETUGAS`, `KURIR` |
+| Tabel user + role | `ADMIN`, `PEMILIK`, `STAF` | `ADMIN`, `PENJUAL`, `PEMBELI` | `ADMIN`, `PETUGAS`, `KURIR` |
 
-Tabel pengguna + role bisa dilihat bentuknya di Tantangan tambahan Demo 3 (`APP_USERS`, hanya di ERD). Titik awal entity per tema ada di `docs/kartu-tema.md` di repo kelompok: contoh, bukan jawaban jadi. Entity kelompok diturunkan dari fitur MVP di project brief CP1.
+Tabel user + role bisa dilihat bentuknya di Tantangan tambahan Demo 3 (`APP_USERS`, hanya di ERD). Titik awal entity per tema ada di `docs/kartu-tema.md` di repo kelompok: contoh, bukan jawaban jadi. Entity kelompok diturunkan dari fitur MVP di project brief CP1.
 
 ### Ide ALP dan produk BNI
 
@@ -132,7 +132,7 @@ Instruksi ALP: ide platform terintegrasi dengan produk BNI yang sudah ada, atau 
 | --- | --- | --- | --- |
 | Perbankan | wondr by BNI · Insight (pemasukan dan pengeluaran per kategori), BNIdirect bisnis · SME Financing (pengajuan KUR dan BNI Wirausaha) | Integrasi produk yang sudah ada | Tabel kategori, transaksi, dan pengajuan pembiayaan |
 | E-commerce | wondr Merchant (terima pembayaran QRIS), BNI Virtual Account (pembayaran tercatat otomatis ke rekening penjual) | Integrasi produk yang sudah ada | Tabel pembayaran dengan metode `VA` dan `TRANSFER` |
-| Logistik | BNI Xpora (platform UMKM go global, logistik bersama PosAja!) | Lini bisnis baru di ekosistem Xpora | Tabel kiriman dan riwayat status |
+| Logistik | BNI Xpora (platform UMKM go global, logistik bersama PosAja!) | Lini bisnis baru di platform Xpora | Tabel kiriman dan riwayat status |
 
 Tulis di README repo bagian **Masalah dan pengguna**: jenis ide, produk BNI yang dikaitkan, dan tabel yang menjadi titik integrasinya. Integrasi di project ini disimulasikan sebagai tabel dan data `SIM` di database kelompok, tanpa API atau data nasabah sungguhan.
 

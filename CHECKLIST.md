@@ -10,7 +10,7 @@
 - [ ] `demo-3/erd-tabungan-umkm.drawio.png` memenuhi checklist Demo 3
 - [ ] `demo-4/latihan-kamus-data.md` terisi dan cocok dengan ERD
 - [ ] Lab: repo kelompok dibuat dari template dan semua anggota sudah clone
-- [ ] Lab: `docs/erd.drawio.png` memuat tabel pengguna + role, `docs/kamus-data.md` cocok dengan ERD, `docs/review.md` terisi (temuan dan `Tanggapan:`)
+- [ ] Lab: `docs/erd.drawio.png` memuat tabel user + role, `docs/kamus-data.md` cocok dengan ERD, `docs/review.md` terisi (temuan dan `Tanggapan:`)
 - [ ] Lab: `lab/cek-erd.py` menampilkan skor otomatis minimal 48 dari 80 (setara 60%), dan ketiga file sudah di-push ke repo kelompok
 - [ ] Lab: README repo kelompok bagian Masalah dan pengguna (termasuk jenis ide dan produk BNI) serta Fitur MVP terisi (paling lambat malam hari 1)
 
