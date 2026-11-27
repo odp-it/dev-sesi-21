@@ -2,7 +2,7 @@
 
 [Persiapan](../README.md) · [Troubleshooting](../TROUBLESHOOTING.md)
 
-Kerjakan 3.1–3.3: gambar ERD di Draw.io dengan shape **Entity Relation** dan relasi crow's foot.
+Kerjakan 3.1-3.3: gambar ERD di Draw.io dengan shape **Entity Relation** dan relasi crow's foot.
 
 ## 3.1 Buat file ERD dan tabel
 
@@ -26,6 +26,10 @@ Yang harus terlihat: 4 tabel di canvas, setiap tabel punya baris `PK` bergaris b
 4. Simpan dengan **Ctrl+S** (Windows/Linux) atau **⌘S** (macOS).
 
 Yang harus terlihat: 3 garis relasi dengan ujung `||` di sisi tabel induk dan kaki gagak di sisi tabel anak. Tutup file lalu buka lagi: diagram tetap bisa diedit. File yang sama juga bisa dibuka sebagai gambar biasa (dilampirkan ke dokumen atau chat tim).
+
+Contoh notasi untuk dua tabel yang sudah terisi di Demo 2 dan Demo 4 (`BRANCHES` 1:N `CUSTOMERS`, dibuat di Draw.io):
+
+![Contoh relasi BRANCHES 1:N CUSTOMERS di Draw.io](contoh-relasi.png)
 
 ## 3.3 Cek dengan checklist dan `../lab/cek-erd.py`
 
@@ -59,5 +63,5 @@ Kerjakan di salinan file (mis. `erd-tantangan.drawio.png`).
 2. Nasabah ingin menyimpan daftar penerima transfer (nama penerima dan nomor rekening penerima). Tambahkan entity-nya ke ERD, tentukan relasinya ke `CUSTOMERS`, dan putuskan kombinasi kolom mana yang harus unik.
 3. Pratinjau dua tabel yang nanti hampir pasti ada di ALP kelompok. Gambar di salinan ERD Tabungan UMKM, hanya di ERD (tanpa `CREATE TABLE`):
    - `APP_USERS` (pengguna aplikasi): `user_id`, `username` (unik), `password_hash`, `role` (nilai dibatasi: `ADMIN`, `PEMILIK`, `STAF`), dan FK ke `CUSTOMERS` yang boleh kosong (admin tidak terikat nasabah).
-   - `LOAN_APPLICATIONS` (pengajuan pembiayaan UMKM): `loan_id`, FK ke `CUSTOMERS`, jumlah pengajuan (uang), tenor dalam bulan (3–60), dan status pengajuan.
+   - `LOAN_APPLICATIONS` (pengajuan pembiayaan UMKM): `loan_id`, FK ke `CUSTOMERS`, jumlah pengajuan (uang), tenor dalam bulan (3-60), dan status pengajuan.
    Tentukan relasi masing-masing ke `CUSTOMERS`, letak FK, dan kolom mana yang memakai `CK`. Angka dan hasil Demo 3 tidak berubah.

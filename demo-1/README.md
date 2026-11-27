@@ -2,7 +2,7 @@
 
 [Persiapan](../README.md) · [Troubleshooting](../TROUBLESHOOTING.md)
 
-Kerjakan 1.1–1.6: jalankan Oracle di Docker, buat user `ALP_DEV`, sambungkan VS Code, lalu jalankan query cek.
+Kerjakan 1.1-1.6: jalankan Oracle di Docker, buat user `ALP_DEV`, sambungkan VS Code, lalu jalankan query cek.
 
 Semua perintah di bagian ini sama untuk Windows (PowerShell), macOS, dan Linux. Docker Desktop (atau Rancher Desktop) harus sudah jalan: ikon paus di menu bar/taskbar berstatus running.
 
@@ -45,7 +45,7 @@ CONTAINER ID   IMAGE                                                        ... 
 6eb8bea4fff9   container-registry.oracle.com/database/free:23.26.4.0-lite   ...   Up 3 minutes (healthy)   0.0.0.0:1521->1521/tcp, [::]:1521->1521/tcp   oracle-alp
 ```
 
-Selama database masih menyiapkan diri, status tertulis `(starting)`. Status `(healthy)` muncul ±30–60 detik setelah `run`; pada laptop dengan 2–4 core bisa sampai ±2 menit.
+Selama database masih menyiapkan diri, status tertulis `(starting)`. Status `(healthy)` muncul ±30-60 detik setelah `run`; pada laptop dengan 2-4 core bisa sampai ±2 menit.
 
 Kalau baris `docker ps` terpotong di terminal yang sempit, maksimalkan panel terminal atau pakai format ringkas:
 

@@ -2,7 +2,7 @@
 
 [Persiapan](../README.md) · [Troubleshooting](../TROUBLESHOOTING.md)
 
-Kerjakan 4.1–4.3: lengkapi kamus data. `BRANCHES` dan `CUSTOMERS` sudah terisi sebagai contoh.
+Kerjakan 4.1-4.3: lengkapi kamus data. `BRANCHES` dan `CUSTOMERS` sudah terisi sebagai contoh.
 
 ## 4.1 Samakan nama dan baca contoh
 

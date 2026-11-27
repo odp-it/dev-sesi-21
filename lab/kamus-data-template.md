@@ -28,7 +28,7 @@ Fungsi tabel (satu kalimat): `...`
 | | | | | | |
 | | | | | | |
 
-Relasi dari tabel ini: `NAMA_TABEL 1 ── N TABEL_LAIN` lewat kolom `...`
+Relasi dari tabel ini: `NAMA_TABEL 1:N TABEL_LAIN` lewat kolom `...`
 
 ## Pemeriksaan sebelum sesi 22
 

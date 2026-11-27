@@ -19,7 +19,7 @@ Satu baris per relasi: kalimat bisnis, bentuk relasi, dan letak foreign key.
 
 | Kalimat | Relasi | Foreign key ada di |
 | --- | --- | --- |
-| Satu cabang punya banyak nasabah | `BRANCHES 1 ── N CUSTOMERS` | `CUSTOMERS.branch_id` |
+| Satu cabang punya banyak nasabah | `BRANCHES 1:N CUSTOMERS` | `CUSTOMERS.branch_id` |
 | TODO | TODO | TODO |
 | TODO | TODO | TODO |
 

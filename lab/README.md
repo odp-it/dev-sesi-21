@@ -10,8 +10,8 @@ Satu repo per kelompok. Nama kelompok ditulis huruf kecil tanpa spasi (mis. `gar
 | --- | --- | --- |
 | Skenario, contoh bentuk, rubrik | Baca skenario, lihat contoh ERD, baca rubrik di slide | 5 |
 | L.0 Repo kelompok | Buat repo dari template, undang anggota, semua clone | 3 |
-| L.1 Daftar entity | Dari fitur MVP CP1, tulis 4–6 entity dan fitur yang memakainya, plus tabel pengguna + role | 3 |
-| L.2 ERD kelompok | Gambar `docs/erd.drawio.png` dengan langkah 3.1–3.2 | 10 |
+| L.1 Daftar entity | Dari fitur MVP CP1, tulis 4-6 entity dan fitur yang memakainya, plus tabel pengguna + role | 3 |
+| L.2 ERD kelompok | Gambar `docs/erd.drawio.png` dengan langkah 3.1-3.2 | 10 |
 | L.3 Peer review | Review ERD kelompok lain, tulis temuan; pemilik menyalin ke `docs/review.md` | 6 |
 | L.4 Kamus data | Isi `docs/kamus-data.md`, tulis `Tanggapan:` di `docs/review.md`, perbarui ERD dan kamus | 5 |
 | L.5 Cek dan README | Jalankan `cek-erd.py`, push, mulai isi README | 3 |
@@ -31,13 +31,13 @@ Yang harus terlihat: folder `docs/` berisi `kartu-tema.md`, `kamus-data.md`, `re
 
 ## L.1 Daftar entity dari fitur MVP
 
-Buka `docs/kartu-tema.md` untuk titik awal entity tema kelompok (contoh, bukan jawaban). Dari backlog MVP CP1, tulis 4–6 entity beserta fitur MVP yang memakainya. Setiap entity harus terkait minimal satu fitur. Relasi N:M (mis. satu pesanan berisi banyak produk) disiapkan tabel penghubungnya.
+Buka `docs/kartu-tema.md` untuk titik awal entity tema kelompok (contoh, bukan jawaban). Dari backlog MVP CP1, tulis 4-6 entity beserta fitur MVP yang memakainya. Setiap entity harus terkait minimal satu fitur. Relasi N:M (mis. satu pesanan berisi banyak produk) disiapkan tabel penghubungnya.
 
 **Tabel pengguna + role wajib masuk daftar** (`<awalan>_APP_USERS`): `username` unik, `password_hash`, `role` dengan nilai dibatasi, dan FK ke entity pemilik akun yang boleh kosong. Bentuknya ada di `docs/kartu-tema.md` dan di Tantangan tambahan Demo 3.
 
 ## L.2 Gambar ERD kelompok
 
-Buat `docs/erd.drawio.png` dengan langkah 3.1–3.2 di Demo 3 (file `.drawio.png` baru di folder `docs`). Driver menggambar, anggota lain membaca teks kebutuhan dan membantu menentukan kolom. Pakai nama kolom `snake_case` dan tipe Oracle. ERD dilanjutkan setelah kelas bila belum selesai.
+Buka `docs/erd.drawio.png` dari template. Isinya starter: tabel `AWALAN_APP_USERS` dan kotak catatan langkah. Ganti `AWALAN_` dengan awalan kelompok, lengkapi tabel pengguna, lalu tambahkan entity tema dengan langkah 3.1-3.2 di Demo 3. Hapus kotak catatan setelah selesai. Driver menggambar, anggota lain membaca teks kebutuhan dan membantu menentukan kolom. Pakai nama kolom `snake_case` dan tipe Oracle. ERD dilanjutkan setelah kelas bila belum selesai.
 
 ## L.3 Peer review
 
@@ -74,7 +74,7 @@ git commit -m "docs: erd, kamus data, dan review tahap 1"
 git push
 ```
 
-Isi juga README repo bagian **Masalah dan pengguna** dan **Fitur MVP** (2–3 kalimat masalah, tabel pengguna, 4–6 fitur dari backlog CP1). Bagian ini boleh selesai malam hari 1.
+Isi juga README repo bagian **Masalah dan pengguna** dan **Fitur MVP** (2-3 kalimat masalah, jenis ide dan produk BNI yang dikaitkan, tabel pengguna, 4-6 fitur dari backlog CP1). Bagian ini boleh selesai malam hari 1.
 
 **Target sebelum sesi 22 (13.00):** `docs/erd.drawio.png`, `docs/kamus-data.md`, `docs/review.md` sudah di repo kelompok dan `cek-erd.py` minimal 48 dari 80. ERD dan kamus ini langsung dipakai untuk `CREATE TABLE` di sesi 22.
 

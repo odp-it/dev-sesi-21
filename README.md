@@ -9,7 +9,7 @@ Siapkan sebelum mulai (download image butuh waktu). Versi dikunci: jangan update
 | Tool | Versi | Catatan |
 | --- | --- | --- |
 | Docker Desktop (atau Rancher Desktop dengan CLI `docker`, kalau Docker Desktop tidak berlisensi di kantor) | Docker Desktop dengan Docker Engine 29.x | Windows: WSL2 aktif (butuh admin sekali). Semua perintah lab memakai `docker` |
-| Image Oracle | `container-registry.oracle.com/database/free:23.26.4.0-lite` | ±1,3 GB download, ±4,5 GB setelah jalan, RAM ±2–2,7 GB |
+| Image Oracle | `container-registry.oracle.com/database/free:23.26.4.0-lite` | ±1,3 GB download, ±4,5 GB setelah jalan, RAM ±2-2,7 GB |
 | VS Code + ekstensi **Oracle SQL Developer for VS Code** | 26.3.x | SQL client |
 | VS Code + ekstensi **Draw.io Integration** (Henning Dieterichs) | 1.19.0 | Menggambar ERD di dalam VS Code |
 | Git + akun GitHub | Git 2.x | Clone dan push repo kelompok (Lab). Akun GitHub pribadi aktif |
@@ -18,25 +18,51 @@ Versi dicek 22 Nov 2026 (Marketplace VS Code). Laptop minimal RAM 8 GB, disk kos
 
 ## Studi Kasus
 
-**Tabungan UMKM** adalah fitur keuangan digital untuk nasabah UMKM di sebuah bank fiktif: pelaku usaha melihat rekening, membaca mutasi, mencatat transfer, dan melihat arus kas per kategori. Tim contoh yang membangunnya memulai dari database. Di Demo 1–4 instruktur memperagakan langkah tim contoh, dan peserta mengikuti. Database-nya menyimpan cabang, nasabah, rekening, dan transaksi. Schema ini dipakai lagi di sesi 22–23 (SQL) dan sesi REST API berikutnya. Semua data di lab ini data simulasi.
+**Tabungan UMKM** adalah fitur keuangan digital untuk nasabah UMKM di sebuah bank fiktif: pelaku usaha melihat rekening, membaca mutasi, mencatat transfer, dan melihat arus kas per kategori. Tim contoh yang membangunnya memulai dari database. Di Demo 1-4 instruktur memperagakan langkah tim contoh, dan peserta mengikuti. Database-nya menyimpan cabang, nasabah, rekening, dan transaksi. Schema ini dipakai lagi di sesi 22-23 (SQL) dan sesi REST API berikutnya. Semua data di lab ini data simulasi.
 
 Di Lab, setiap kelompok mengerjakan hal yang sama untuk ALP-nya sendiri.
 
 ## Project Kelompok: ALP Database Sprint
 
-**Tujuan.** Dalam dua hari (sesi 21–23 database Oracle, sesi 24 Claude Code), setiap kelompok membangun **database ALP sendiri** yang bisa dibangun ulang, terdokumentasi, dan dipresentasikan. Ini potongan database dari CP2 ALP ("ERD dan database schema") dan menjadi bekal untuk sesi Node.js/Express, React.js, dan React Native: backend, web, dan mobile membaca database yang sama.
+**Tujuan.** Dalam dua hari (sesi 21-23 database Oracle, sesi 24 Claude Code), setiap kelompok membangun **database ALP sendiri** yang bisa dibangun ulang, terdokumentasi, dan dipresentasikan. Ini potongan database dari CP2 ALP ("ERD dan database schema") dan menjadi bekal untuk sesi Node.js/Express, React.js, dan React Native: backend, web, dan mobile membaca database yang sama.
 
-**Kelompok dan tema.** Kelompok ALP 3–4 orang, tema sesuai project brief CP1 (sesi 17–20): Perbankan, E-commerce, atau Logistik. Satu repo per kelompok, dibuat dari template (langkah L.0 di bagian Lab).
+**Kelompok dan tema.** Kelompok ALP 3-4 orang, tema sesuai project brief CP1 (sesi 17-20): Perbankan, E-commerce, atau Logistik. Satu repo per kelompok, dibuat dari template (langkah L.0 di bagian Lab).
+
+Alur hasil antar sesi (kotak oranye = sesi ini):
+
+```mermaid
+---
+config:
+  look: classic
+  flowchart:
+    wrappingWidth: 260
+---
+flowchart LR
+  s21["Sesi 21 · sesi ini<br/>Tahap 1<br/>ERD + kamus data"]
+  s22["Sesi 22<br/>Tahap 2<br/>tabel + data contoh"]
+  s23["Sesi 23<br/>Tahap 3<br/>laporan + index"]
+  s24["Sesi 24<br/>16.00<br/>presentasi kelompok"]
+  be["Sesi backend<br/>Node.js/Express"]
+  s21 -->|kamus data| s22
+  s22 -->|tabel + data| s23
+  s23 -->|README + bukti cek| s24
+  s24 -->|repo kelompok| be
+  style s21 fill:#F06634,color:#fff,stroke:#F06634
+  style s22 fill:#1C4587,color:#fff,stroke:#1C4587
+  style s23 fill:#1C4587,color:#fff,stroke:#1C4587
+  style s24 fill:#1C4587,color:#fff,stroke:#1C4587
+  style be fill:#1C4587,color:#fff,stroke:#1C4587
+```
 
 ### Jadwal dua hari
 
 | Waktu | Sesi | Di Demo (individu) | Di Lab (kelompok, repo kelompok) | Hasil Lab |
 | --- | --- | --- | --- | --- |
-| Hari 1, 08.00–12.00 | 21 | Setup Oracle, baca ERD, gambar ERD, kamus data Tabungan UMKM | Kick-off, Tahap 1: repo, ERD, peer review, kamus data | `docs/erd.drawio.png`, `docs/kamus-data.md`, `docs/review.md` |
-| Hari 1, 13.00–17.00 | 22 | DDL, DML, uji input salah, query dasar | Tahap 2: DDL, data contoh, uji input salah, `00-run-all.sql` | `db/00` sampai `db/03` |
+| Hari 1, 08.00-12.00 | 21 | Setup Oracle, baca ERD, gambar ERD, kamus data Tabungan UMKM | Kick-off, Tahap 1: repo, ERD, peer review, kamus data | `docs/erd.drawio.png`, `docs/kamus-data.md`, `docs/review.md` |
+| Hari 1, 13.00-17.00 | 22 | DDL, DML, uji input salah, query dasar | Tahap 2: DDL, data contoh, uji input salah, `00-run-all.sql` | `db/00` sampai `db/03` |
 | Malam hari 1 | mandiri | | Rapikan sesuai review, bangun ulang dua kali, isi README | `README.md` |
-| Hari 2, 08.00–12.00 | 23 | Laporan dan validasi, transaksi, explain plan dan index, koneksi Java/Node | Tahap 3: data uji, view laporan, validasi, transaksi, index | `db/04` sampai `db/07` |
-| Hari 2, 13.00–17.00 | 24 | Claude Code | Persiapan, lalu **presentasi kelompok 16.00–17.00** | README lengkap, bukti cek |
+| Hari 2, 08.00-12.00 | 23 | Laporan dan validasi, transaksi, explain plan dan index, koneksi Java/Node | Tahap 3: data uji, view laporan, validasi, transaksi, index | `db/04` sampai `db/07` |
+| Hari 2, 13.00-17.00 | 24 | Claude Code | Persiapan, lalu **presentasi kelompok 16.00-17.00** | README lengkap, bukti cek |
 | Hari 2, 23.59 | mandiri | | Push final, link repo dikumpulkan | Paket serah terima ke backend |
 
 ### Repo kelompok
@@ -68,7 +94,8 @@ Satu anggota (driver) membuat repo dan mengundang anggota lain. Semua anggota cl
 
 1. Tabel pengguna + role (`<awalan>_APP_USERS`), dipakai untuk login di sesi backend. Mulai dari ERD di Lab ini.
 2. README repo berisi: masalah dan pengguna, fitur MVP, cara menjalankan, ERD, aturan data penting, peta fitur → tabel → query, laporan, tiga pertanyaan bisnis, bukti cek.
-3. Awalan tabel 2–4 huruf per kelompok (mis. `KAS_`), supaya tabel kelompok dikenali.
+3. Awalan tabel 2-4 huruf per kelompok (mis. `KAS_`), supaya tabel kelompok dikenali.
+4. Ide terhubung ke produk BNI yang sudah ada atau menjadi lini bisnis baru BNI (lihat **Ide ALP dan produk BNI**), ditulis di README bagian Masalah dan pengguna.
 
 ### Penilaian
 
@@ -97,6 +124,18 @@ Konsep di Demo (Tabungan UMKM) sama dengan yang dibutuhkan ERD kelompok. Pakai t
 
 Tabel pengguna + role bisa dilihat bentuknya di Tantangan tambahan Demo 3 (`APP_USERS`, hanya di ERD). Titik awal entity per tema ada di `docs/kartu-tema.md` di repo kelompok: contoh, bukan jawaban jadi. Entity kelompok diturunkan dari fitur MVP di project brief CP1.
 
+### Ide ALP dan produk BNI
+
+Instruksi ALP: ide platform terintegrasi dengan produk BNI yang sudah ada, atau menjadi lini bisnis baru BNI. Tabel ini contoh pemetaan dari produk BNI yang sedang berjalan; kelompok boleh memilih produk lain yang sesuai project brief CP1.
+
+| Tema | Produk BNI terkini | Jenis ide | Titik integrasi di ERD |
+| --- | --- | --- | --- |
+| Perbankan | wondr by BNI · Insight (pemasukan dan pengeluaran per kategori), BNIdirect bisnis · SME Financing (pengajuan KUR dan BNI Wirausaha) | Integrasi produk yang sudah ada | Tabel kategori, transaksi, dan pengajuan pembiayaan |
+| E-commerce | wondr Merchant (terima pembayaran QRIS), BNI Virtual Account (pembayaran tercatat otomatis ke rekening penjual) | Integrasi produk yang sudah ada | Tabel pembayaran dengan metode `VA` dan `TRANSFER` |
+| Logistik | BNI Xpora (platform UMKM go global, logistik bersama PosAja!) | Lini bisnis baru di ekosistem Xpora | Tabel kiriman dan riwayat status |
+
+Tulis di README repo bagian **Masalah dan pengguna**: jenis ide, produk BNI yang dikaitkan, dan tabel yang menjadi titik integrasinya. Integrasi di project ini disimulasikan sebagai tabel dan data `SIM` di database kelompok, tanpa API atau data nasabah sungguhan.
+
 ## Struktur Repo
 
 | Folder | Isi |
@@ -122,6 +161,6 @@ Container dan volume **jangan dihapus**: dipakai lagi di sesi 22 dan 23. Setelah
 docker stop oracle-alp
 ```
 
-Di awal sesi berikutnya: buka Docker Desktop, `docker start oracle-alp`, tunggu `(healthy)` di `docker ps` (±15–40 detik; kalau status `Exited (255)` setelah laptop dimatikan, perintah yang sama cukup), lalu buka koneksi `ALP_DEV @ FREEPDB1`.
+Di awal sesi berikutnya: buka Docker Desktop, `docker start oracle-alp`, tunggu `(healthy)` di `docker ps` (±15-40 detik; kalau status `Exited (255)` setelah laptop dimatikan, perintah yang sama cukup), lalu buka koneksi `ALP_DEV @ FREEPDB1`.
 
 Sesi 22 mengubah ERD Tabungan UMKM menjadi tabel sungguhan dengan `CREATE TABLE`, constraint, dan data contoh.
