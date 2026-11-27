@@ -20,8 +20,8 @@ Satu repo per kelompok. Nama kelompok ditulis huruf kecil tanpa spasi (mis. `gar
 
 1. Satu anggota (driver) membuka halaman template `odp-it/alp-db-template` di GitHub, klik **Use this template**, lalu **Create a new repository**.
 2. Isi nama repo `alp-<nama-kelompok>-db`. Visibility mengikuti pengumuman instruktur.
-3. Buka **Settings** → **Collaborators**, undang semua anggota kelompok (dan akun yang disebut instruktur).
-4. Semua anggota clone repo ke laptop masing-masing, lalu buka foldernya di VS Code:
+3. Buka **Settings** → **Collaborators**, undang semua anggota kelompok (dan akun yang disebut instruktur). Setiap anggota menerima undangan lewat email atau notifikasi GitHub sebelum clone.
+4. Semua anggota clone repo ke laptop masing-masing. Cara paling mudah lewat VS Code: Command Palette → **Git: Clone** → **Clone from GitHub**, login GitHub di browser saat diminta (login ini juga dipakai saat `git push`). Lewat terminal:
 
 ```bash
 git clone https://github.com/<akun-driver>/alp-<nama-kelompok>-db.git
@@ -37,13 +37,13 @@ Buka `docs/kartu-tema.md` untuk titik awal entity tema kelompok (contoh, bukan j
 
 ## L.2 Gambar ERD kelompok
 
-Buat `docs/erd.drawio.png` dengan langkah 3.1–3.2 (file `.drawio.png` baru di folder `docs`). Driver menggambar, anggota lain membaca teks kebutuhan dan membantu menentukan kolom. Pakai nama kolom `snake_case` dan tipe Oracle. ERD dilanjutkan setelah kelas bila belum selesai.
+Buat `docs/erd.drawio.png` dengan langkah 3.1–3.2 di Demo 3 (file `.drawio.png` baru di folder `docs`). Driver menggambar, anggota lain membaca teks kebutuhan dan membantu menentukan kolom. Pakai nama kolom `snake_case` dan tipe Oracle. ERD dilanjutkan setelah kelas bila belum selesai.
 
 ## L.3 Peer review
 
 Instruktur menentukan pasangan melingkar: kelompok 1 mereview kelompok 2, kelompok 2 mereview kelompok 3, dan seterusnya sampai kelompok terakhir mereview kelompok 1. Pemilik ERD menunjukkan `docs/erd.drawio.png` (layar laptop atau kirim file lewat chat kelas).
 
-1. Reviewer memakai `checklist-erd.md` bagian "Lab L.3".
+1. Reviewer memakai `checklist-erd.md` bagian "Lab L.3" (file lab sesi 21, tidak ada di repo kelompok).
 2. Reviewer menulis maksimal 3 temuan, satu kalimat per temuan: apa yang diubah dan kenapa.
 3. Pemilik ERD menyalin temuan ke `docs/review.md` (isi `Reviewer:` dengan nama kelompok reviewer).
 
@@ -97,7 +97,7 @@ Rubrik ini membantu kelompok menilai diri sendiri. Nilai project diberikan saat 
 | Menanggapi review | 5 | Review | Setiap temuan punya `Tanggapan:` di `docs/review.md`; ERD dan kamus sudah diperbarui sesuai keputusan |
 | **Total** | **100** | | |
 
-Target minimal 60 poin.00). Tugas lanjutan tidak dikumpulkan terpisah; cek sendiri dengan `cek-erd.py` dan daftar rubrik di atas, lalu push ke repo kelompok.
+Target minimal 60 poin. Cek sendiri dengan `cek-erd.py` dan daftar rubrik di atas, lalu push ke repo kelompok.
 
 Cek otomatis hanya menghitung bentuk: tabel, key, garis, tipe, dan kecocokan kamus. Benar tidaknya entity untuk fitur kelompok dinilai manusia.
 

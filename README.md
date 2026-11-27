@@ -72,7 +72,7 @@ Satu anggota (driver) membuat repo dan mengundang anggota lain. Semua anggota cl
 
 ### Penilaian
 
-Nilai project diberikan **saat presentasi di sesi 24**, berdasarkan hasil yang ditunjukkan di kelas. Repo pukul 23.59 hari 2 hanya untuk serah terima ke backend. Presentasi 5 menit per kelompok plus 3 menit tanya jawab, tanpa slide: README repo menjadi alur bicara dan demo langsung di VS Code.
+Nilai project diberikan **saat presentasi di sesi 24**, berdasarkan hasil yang ditunjukkan di kelas. Repo pukul 23.59 hari 2 hanya untuk serah terima ke backend. Presentasi 5 menit per kelompok plus 3 menit tanya jawab, tanpa slide: README repo menjadi alur bicara dan demo langsung di VS Code. Pergantian kelompok dilakukan saat tanya jawab: kelompok berikutnya menyiapkan laptop selagi kelompok sebelumnya menjawab.
 
 | Komponen | Poin | Yang ditunjukkan |
 | --- | --- | --- |
